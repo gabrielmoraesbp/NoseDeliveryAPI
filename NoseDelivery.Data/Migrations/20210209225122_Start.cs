@@ -114,7 +114,7 @@ namespace NoseDelivery.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Imagems",
+                name: "Imagens",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "char(36)", nullable: false),
@@ -123,9 +123,9 @@ namespace NoseDelivery.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Imagems", x => x.Id);
+                    table.PrimaryKey("PK_Imagens", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Imagems_Produtos_ProdutoId",
+                        name: "FK_Imagens_Produtos_ProdutoId",
                         column: x => x.ProdutoId,
                         principalTable: "Produtos",
                         principalColumn: "Id",
@@ -133,34 +133,32 @@ namespace NoseDelivery.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Produtos_Para_Pedidos",
+                name: "ProdutosParaPedidos",
                 columns: table => new
                 {
-                    PedidoId = table.Column<int>(type: "int", nullable: false),
-                    ProdutoId = table.Column<int>(type: "int", nullable: false),
-                    PedidoId1 = table.Column<Guid>(type: "char(36)", nullable: true),
-                    ProdutoId1 = table.Column<Guid>(type: "char(36)", nullable: true)
+                    PedidoId = table.Column<Guid>(type: "char(36)", nullable: false),
+                    ProdutoId = table.Column<Guid>(type: "char(36)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Produtos_Para_Pedidos", x => new { x.ProdutoId, x.PedidoId });
+                    table.PrimaryKey("PK_ProdutosParaPedidos", x => new { x.ProdutoId, x.PedidoId });
                     table.ForeignKey(
-                        name: "FK_Produtos_Para_Pedidos_Pedidos_PedidoId1",
-                        column: x => x.PedidoId1,
+                        name: "FK_ProdutosParaPedidos_Pedidos_PedidoId",
+                        column: x => x.PedidoId,
                         principalTable: "Pedidos",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Produtos_Para_Pedidos_Produtos_ProdutoId1",
-                        column: x => x.ProdutoId1,
+                        name: "FK_ProdutosParaPedidos_Produtos_ProdutoId",
+                        column: x => x.ProdutoId,
                         principalTable: "Produtos",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Imagems_ProdutoId",
-                table: "Imagems",
+                name: "IX_Imagens_ProdutoId",
+                table: "Imagens",
                 column: "ProdutoId");
 
             migrationBuilder.CreateIndex(
@@ -169,14 +167,9 @@ namespace NoseDelivery.Data.Migrations
                 column: "ClienteId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Produtos_Para_Pedidos_PedidoId1",
-                table: "Produtos_Para_Pedidos",
-                column: "PedidoId1");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Produtos_Para_Pedidos_ProdutoId1",
-                table: "Produtos_Para_Pedidos",
-                column: "ProdutoId1");
+                name: "IX_ProdutosParaPedidos_PedidoId",
+                table: "ProdutosParaPedidos",
+                column: "PedidoId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -188,10 +181,10 @@ namespace NoseDelivery.Data.Migrations
                 name: "Funcionarios");
 
             migrationBuilder.DropTable(
-                name: "Imagems");
+                name: "Imagens");
 
             migrationBuilder.DropTable(
-                name: "Produtos_Para_Pedidos");
+                name: "ProdutosParaPedidos");
 
             migrationBuilder.DropTable(
                 name: "Pedidos");

@@ -9,7 +9,7 @@ using NoseDelivery.Data.Context;
 namespace NoseDelivery.Data.Migrations
 {
     [DbContext(typeof(MeuDbContext))]
-    [Migration("20210206015832_Start")]
+    [Migration("20210209225122_Start")]
     partial class Start
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -174,7 +174,7 @@ namespace NoseDelivery.Data.Migrations
 
                     b.HasIndex("ProdutoId");
 
-                    b.ToTable("Imagems");
+                    b.ToTable("Imagens");
                 });
 
             modelBuilder.Entity("NoseDelivery.Business.Models.Pedido", b =>
@@ -228,27 +228,19 @@ namespace NoseDelivery.Data.Migrations
                     b.ToTable("Produtos");
                 });
 
-            modelBuilder.Entity("NoseDelivery.Business.Models.Produto_Para_Pedido", b =>
+            modelBuilder.Entity("NoseDelivery.Business.Models.ProdutoParaPedido", b =>
                 {
-                    b.Property<int>("ProdutoId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PedidoId")
-                        .HasColumnType("int");
-
-                    b.Property<Guid?>("PedidoId1")
+                    b.Property<Guid>("ProdutoId")
                         .HasColumnType("char(36)");
 
-                    b.Property<Guid?>("ProdutoId1")
+                    b.Property<Guid>("PedidoId")
                         .HasColumnType("char(36)");
 
                     b.HasKey("ProdutoId", "PedidoId");
 
-                    b.HasIndex("PedidoId1");
+                    b.HasIndex("PedidoId");
 
-                    b.HasIndex("ProdutoId1");
-
-                    b.ToTable("Produtos_Para_Pedidos");
+                    b.ToTable("ProdutosParaPedidos");
                 });
 
             modelBuilder.Entity("NoseDelivery.Business.Models.Imagem", b =>
@@ -269,15 +261,19 @@ namespace NoseDelivery.Data.Migrations
                     b.Navigation("Cliente");
                 });
 
-            modelBuilder.Entity("NoseDelivery.Business.Models.Produto_Para_Pedido", b =>
+            modelBuilder.Entity("NoseDelivery.Business.Models.ProdutoParaPedido", b =>
                 {
                     b.HasOne("NoseDelivery.Business.Models.Pedido", "Pedido")
-                        .WithMany("Produtos_Para_Pedidos")
-                        .HasForeignKey("PedidoId1");
+                        .WithMany("ProdutosParaPedidos")
+                        .HasForeignKey("PedidoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("NoseDelivery.Business.Models.Produto", "Produto")
-                        .WithMany("Produtos_Para_Pedidos")
-                        .HasForeignKey("ProdutoId1");
+                        .WithMany("ProdutosParaPedidos")
+                        .HasForeignKey("ProdutoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Pedido");
 
@@ -286,12 +282,12 @@ namespace NoseDelivery.Data.Migrations
 
             modelBuilder.Entity("NoseDelivery.Business.Models.Pedido", b =>
                 {
-                    b.Navigation("Produtos_Para_Pedidos");
+                    b.Navigation("ProdutosParaPedidos");
                 });
 
             modelBuilder.Entity("NoseDelivery.Business.Models.Produto", b =>
                 {
-                    b.Navigation("Produtos_Para_Pedidos");
+                    b.Navigation("ProdutosParaPedidos");
                 });
 #pragma warning restore 612, 618
         }

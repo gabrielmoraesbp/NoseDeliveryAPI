@@ -11,7 +11,7 @@ namespace NoseDelivery.Business.Models
         public bool Status { get; set; }
 
         public Cliente Cliente { get; set; }
-        public ICollection<Produto_Para_Pedido> Produtos_Para_Pedidos { get; set; }
+        public ICollection<ProdutoParaPedido> ProdutosParaPedidos { get; set; }
 
     }
 }

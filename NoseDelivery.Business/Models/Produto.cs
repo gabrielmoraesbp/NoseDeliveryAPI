@@ -11,7 +11,7 @@ namespace NoseDelivery.Business.Models
         public double Preco { get; set; }
         public bool Status { get; set; }
         public int Quantidade { get; set; }
-        public ICollection<Produto_Para_Pedido> Produtos_Para_Pedidos { get; set; }
+        public ICollection<ProdutoParaPedido> ProdutosParaPedidos { get; set; }
 
     }
 }

@@ -5,13 +5,11 @@ using System.Text;
 
 namespace NoseDelivery.Business.Models
 {
-    public class Produto_Para_Pedido
+    public class ProdutoParaPedido
     {
-        [Key]
-        public int PedidoId { get; set; }
-        [Key]
-        public int ProdutoId { get; set; }
 
+        public Guid PedidoId { get; set; }
+        public Guid ProdutoId { get; set; }
         public Pedido Pedido { get; set; }
         public Produto Produto { get; set; }
 
