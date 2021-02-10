@@ -16,3 +16,11 @@ C:\Users\gabri\source\repos\NoseDelivery.API\NoseDelivery.Data\obj\Debug\net5.0\
 C:\Users\gabri\source\repos\NoseDelivery.API\NoseDelivery.Data\obj\Debug\net5.0\ref\NoseDelivery.Data.dll
 C:\Users\gabri\source\repos\NoseDelivery.API\NoseDelivery.Data\obj\Debug\net5.0\NoseDelivery.Data.pdb
 C:\Users\gabri\source\repos\NoseDelivery.API\NoseDelivery.Data\obj\Debug\net5.0\NoseDelivery.Data.genruntimeconfig.cache
+C:\APRENDENDO\nose-delivery\NoseDeliveryAPI\NoseDelivery.Data\obj\Debug\net5.0\NoseDelivery.Data.csprojAssemblyReference.cache
+C:\APRENDENDO\nose-delivery\NoseDeliveryAPI\NoseDelivery.Data\obj\Debug\net5.0\NoseDelivery.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\APRENDENDO\nose-delivery\NoseDeliveryAPI\NoseDelivery.Data\obj\Debug\net5.0\NoseDelivery.Data.AssemblyInfoInputs.cache
+C:\APRENDENDO\nose-delivery\NoseDeliveryAPI\NoseDelivery.Data\obj\Debug\net5.0\NoseDelivery.Data.AssemblyInfo.cs
+C:\APRENDENDO\nose-delivery\NoseDeliveryAPI\NoseDelivery.Data\obj\Debug\net5.0\NoseDelivery.Data.csproj.CoreCompileInputs.cache
+C:\APRENDENDO\nose-delivery\NoseDeliveryAPI\NoseDelivery.Data\obj\Debug\net5.0\NoseDelivery.Data.dll
+C:\APRENDENDO\nose-delivery\NoseDeliveryAPI\NoseDelivery.Data\obj\Debug\net5.0\ref\NoseDelivery.Data.dll
+C:\APRENDENDO\nose-delivery\NoseDeliveryAPI\NoseDelivery.Data\obj\Debug\net5.0\NoseDelivery.Data.pdb

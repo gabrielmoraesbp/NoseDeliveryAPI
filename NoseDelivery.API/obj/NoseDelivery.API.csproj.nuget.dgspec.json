@@ -1,41 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gabri\\source\\repos\\NoseDelivery.API\\NoseDelivery.API\\NoseDelivery.API.csproj": {}
+    "C:\\APRENDENDO\\nose-delivery\\NoseDeliveryAPI\\NoseDelivery.API\\NoseDelivery.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gabri\\source\\repos\\NoseDelivery.API\\NoseDelivery.API\\NoseDelivery.API.csproj": {
+    "C:\\APRENDENDO\\nose-delivery\\NoseDeliveryAPI\\NoseDelivery.API\\NoseDelivery.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabri\\source\\repos\\NoseDelivery.API\\NoseDelivery.API\\NoseDelivery.API.csproj",
+        "projectUniqueName": "C:\\APRENDENDO\\nose-delivery\\NoseDeliveryAPI\\NoseDelivery.API\\NoseDelivery.API.csproj",
         "projectName": "NoseDelivery.API",
-        "projectPath": "C:\\Users\\gabri\\source\\repos\\NoseDelivery.API\\NoseDelivery.API\\NoseDelivery.API.csproj",
-        "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabri\\source\\repos\\NoseDelivery.API\\NoseDelivery.API\\obj\\",
+        "projectPath": "C:\\APRENDENDO\\nose-delivery\\NoseDeliveryAPI\\NoseDelivery.API\\NoseDelivery.API.csproj",
+        "packagesPath": "C:\\Users\\fernando.brozinga\\.nuget\\packages\\",
+        "outputPath": "C:\\APRENDENDO\\nose-delivery\\NoseDeliveryAPI\\NoseDelivery.API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fernando.brozinga\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/linx-tisistemas-billing/_packaging/ti-sistemas-billing/nuget/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\gabri\\source\\repos\\NoseDelivery.API\\NoseDelivery.Business\\NoseDelivery.Business.csproj": {
-                "projectPath": "C:\\Users\\gabri\\source\\repos\\NoseDelivery.API\\NoseDelivery.Business\\NoseDelivery.Business.csproj"
+              "C:\\APRENDENDO\\nose-delivery\\NoseDeliveryAPI\\NoseDelivery.Business\\NoseDelivery.Business.csproj": {
+                "projectPath": "C:\\APRENDENDO\\nose-delivery\\NoseDeliveryAPI\\NoseDelivery.Business\\NoseDelivery.Business.csproj"
               },
-              "C:\\Users\\gabri\\source\\repos\\NoseDelivery.API\\NoseDelivery.Data\\NoseDelivery.Data.csproj": {
-                "projectPath": "C:\\Users\\gabri\\source\\repos\\NoseDelivery.API\\NoseDelivery.Data\\NoseDelivery.Data.csproj"
+              "C:\\APRENDENDO\\nose-delivery\\NoseDeliveryAPI\\NoseDelivery.Data\\NoseDelivery.Data.csproj": {
+                "projectPath": "C:\\APRENDENDO\\nose-delivery\\NoseDeliveryAPI\\NoseDelivery.Data\\NoseDelivery.Data.csproj"
               }
             }
           }
@@ -47,40 +45,40 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[3.1.12, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[3.1.12, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[3.1.12, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[3.1.12, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[3.1.12, )"
             },
             "Microsoft.Extensions.Identity.Core": {
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[3.1.12, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
-              "version": "[5.0.0-alpha.2, )"
+              "version": "[3.2.4, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -105,36 +103,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\gabri\\source\\repos\\NoseDelivery.API\\NoseDelivery.Business\\NoseDelivery.Business.csproj": {
+    "C:\\APRENDENDO\\nose-delivery\\NoseDeliveryAPI\\NoseDelivery.Business\\NoseDelivery.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabri\\source\\repos\\NoseDelivery.API\\NoseDelivery.Business\\NoseDelivery.Business.csproj",
+        "projectUniqueName": "C:\\APRENDENDO\\nose-delivery\\NoseDeliveryAPI\\NoseDelivery.Business\\NoseDelivery.Business.csproj",
         "projectName": "NoseDelivery.Business",
-        "projectPath": "C:\\Users\\gabri\\source\\repos\\NoseDelivery.API\\NoseDelivery.Business\\NoseDelivery.Business.csproj",
-        "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabri\\source\\repos\\NoseDelivery.API\\NoseDelivery.Business\\obj\\",
+        "projectPath": "C:\\APRENDENDO\\nose-delivery\\NoseDeliveryAPI\\NoseDelivery.Business\\NoseDelivery.Business.csproj",
+        "packagesPath": "C:\\Users\\fernando.brozinga\\.nuget\\packages\\",
+        "outputPath": "C:\\APRENDENDO\\nose-delivery\\NoseDeliveryAPI\\NoseDelivery.Business\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fernando.brozinga\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/linx-tisistemas-billing/_packaging/ti-sistemas-billing/nuget/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -145,36 +141,36 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[3.1.12, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[3.1.12, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[3.1.12, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[3.1.12, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[3.1.12, )"
             },
             "Microsoft.Extensions.Identity.Core": {
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[3.1.12, )"
             }
           },
           "imports": [
@@ -192,39 +188,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\gabri\\source\\repos\\NoseDelivery.API\\NoseDelivery.Data\\NoseDelivery.Data.csproj": {
+    "C:\\APRENDENDO\\nose-delivery\\NoseDeliveryAPI\\NoseDelivery.Data\\NoseDelivery.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabri\\source\\repos\\NoseDelivery.API\\NoseDelivery.Data\\NoseDelivery.Data.csproj",
+        "projectUniqueName": "C:\\APRENDENDO\\nose-delivery\\NoseDeliveryAPI\\NoseDelivery.Data\\NoseDelivery.Data.csproj",
         "projectName": "NoseDelivery.Data",
-        "projectPath": "C:\\Users\\gabri\\source\\repos\\NoseDelivery.API\\NoseDelivery.Data\\NoseDelivery.Data.csproj",
-        "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabri\\source\\repos\\NoseDelivery.API\\NoseDelivery.Data\\obj\\",
+        "projectPath": "C:\\APRENDENDO\\nose-delivery\\NoseDeliveryAPI\\NoseDelivery.Data\\NoseDelivery.Data.csproj",
+        "packagesPath": "C:\\Users\\fernando.brozinga\\.nuget\\packages\\",
+        "outputPath": "C:\\APRENDENDO\\nose-delivery\\NoseDeliveryAPI\\NoseDelivery.Data\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fernando.brozinga\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/linx-tisistemas-billing/_packaging/ti-sistemas-billing/nuget/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\gabri\\source\\repos\\NoseDelivery.API\\NoseDelivery.Business\\NoseDelivery.Business.csproj": {
-                "projectPath": "C:\\Users\\gabri\\source\\repos\\NoseDelivery.API\\NoseDelivery.Business\\NoseDelivery.Business.csproj"
+              "C:\\APRENDENDO\\nose-delivery\\NoseDeliveryAPI\\NoseDelivery.Business\\NoseDelivery.Business.csproj": {
+                "projectPath": "C:\\APRENDENDO\\nose-delivery\\NoseDeliveryAPI\\NoseDelivery.Business\\NoseDelivery.Business.csproj"
               }
             }
           }
@@ -236,36 +230,36 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[3.1.12, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[3.1.12, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[3.1.12, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[3.1.12, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[3.1.12, )"
             },
             "Microsoft.Extensions.Identity.Core": {
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[3.1.12, )"
             }
           },
           "imports": [
@@ -283,7 +277,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

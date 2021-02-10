@@ -1,18 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using NoseDelivery.Data.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 
 namespace NoseDelivery.API
@@ -30,7 +23,7 @@ namespace NoseDelivery.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<MeuDbContext>(options =>
-            options.UseMySql(Configuration.GetConnectionString("DefaultConnection"), new MySqlServerVersion(new Version(8, 0, 20))));
+            options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
 
 
             services.AddControllers();

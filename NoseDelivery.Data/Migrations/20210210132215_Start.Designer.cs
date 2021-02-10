@@ -9,15 +9,15 @@ using NoseDelivery.Data.Context;
 namespace NoseDelivery.Data.Migrations
 {
     [DbContext(typeof(MeuDbContext))]
-    [Migration("20210209225122_Start")]
+    [Migration("20210210132215_Start")]
     partial class Start
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("Relational:MaxIdentifierLength", 64)
-                .HasAnnotation("ProductVersion", "5.0.2");
+                .HasAnnotation("ProductVersion", "3.1.12")
+                .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("NoseDelivery.Business.Models.Cliente", b =>
                 {
@@ -248,8 +248,6 @@ namespace NoseDelivery.Data.Migrations
                     b.HasOne("NoseDelivery.Business.Models.Produto", "Produto")
                         .WithMany()
                         .HasForeignKey("ProdutoId");
-
-                    b.Navigation("Produto");
                 });
 
             modelBuilder.Entity("NoseDelivery.Business.Models.Pedido", b =>
@@ -257,8 +255,6 @@ namespace NoseDelivery.Data.Migrations
                     b.HasOne("NoseDelivery.Business.Models.Cliente", "Cliente")
                         .WithMany()
                         .HasForeignKey("ClienteId");
-
-                    b.Navigation("Cliente");
                 });
 
             modelBuilder.Entity("NoseDelivery.Business.Models.ProdutoParaPedido", b =>
@@ -274,20 +270,6 @@ namespace NoseDelivery.Data.Migrations
                         .HasForeignKey("ProdutoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Pedido");
-
-                    b.Navigation("Produto");
-                });
-
-            modelBuilder.Entity("NoseDelivery.Business.Models.Pedido", b =>
-                {
-                    b.Navigation("ProdutosParaPedidos");
-                });
-
-            modelBuilder.Entity("NoseDelivery.Business.Models.Produto", b =>
-                {
-                    b.Navigation("ProdutosParaPedidos");
                 });
 #pragma warning restore 612, 618
         }

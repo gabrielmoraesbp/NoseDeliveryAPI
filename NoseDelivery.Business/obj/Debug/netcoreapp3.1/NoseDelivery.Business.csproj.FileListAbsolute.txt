@@ -1,0 +1,12 @@
+C:\APRENDENDO\nose-delivery\NoseDeliveryAPI\NoseDelivery.Business\bin\Debug\netcoreapp3.1\NoseDelivery.Business.deps.json
+C:\APRENDENDO\nose-delivery\NoseDeliveryAPI\NoseDelivery.Business\bin\Debug\netcoreapp3.1\NoseDelivery.Business.runtimeconfig.json
+C:\APRENDENDO\nose-delivery\NoseDeliveryAPI\NoseDelivery.Business\bin\Debug\netcoreapp3.1\NoseDelivery.Business.runtimeconfig.dev.json
+C:\APRENDENDO\nose-delivery\NoseDeliveryAPI\NoseDelivery.Business\bin\Debug\netcoreapp3.1\NoseDelivery.Business.dll
+C:\APRENDENDO\nose-delivery\NoseDeliveryAPI\NoseDelivery.Business\bin\Debug\netcoreapp3.1\NoseDelivery.Business.pdb
+C:\APRENDENDO\nose-delivery\NoseDeliveryAPI\NoseDelivery.Business\obj\Debug\netcoreapp3.1\NoseDelivery.Business.csprojAssemblyReference.cache
+C:\APRENDENDO\nose-delivery\NoseDeliveryAPI\NoseDelivery.Business\obj\Debug\netcoreapp3.1\NoseDelivery.Business.AssemblyInfoInputs.cache
+C:\APRENDENDO\nose-delivery\NoseDeliveryAPI\NoseDelivery.Business\obj\Debug\netcoreapp3.1\NoseDelivery.Business.AssemblyInfo.cs
+C:\APRENDENDO\nose-delivery\NoseDeliveryAPI\NoseDelivery.Business\obj\Debug\netcoreapp3.1\NoseDelivery.Business.csproj.CoreCompileInputs.cache
+C:\APRENDENDO\nose-delivery\NoseDeliveryAPI\NoseDelivery.Business\obj\Debug\netcoreapp3.1\NoseDelivery.Business.dll
+C:\APRENDENDO\nose-delivery\NoseDeliveryAPI\NoseDelivery.Business\obj\Debug\netcoreapp3.1\NoseDelivery.Business.pdb
+C:\APRENDENDO\nose-delivery\NoseDeliveryAPI\NoseDelivery.Business\obj\Debug\netcoreapp3.1\NoseDelivery.Business.genruntimeconfig.cache
