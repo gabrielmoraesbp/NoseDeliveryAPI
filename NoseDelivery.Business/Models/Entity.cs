@@ -5,7 +5,7 @@ using System.Text;
 
 namespace NoseDelivery.Business.Models
 {
-    public abstract class Entity
+    public class Entity
     {
         protected Entity()
         {
