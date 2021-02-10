@@ -10,7 +10,7 @@ namespace NoseDelivery.Business.Services
 {
     public class PedidoService : IPedidoService
     {
-        private readonly IPedidoRepository _pedidoRepository;
+        //private readonly IPedidoRepository _pedidoRepository;
 
 
         public Task Adicionar(Pedido pedido)
