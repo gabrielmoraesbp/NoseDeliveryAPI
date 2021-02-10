@@ -1,10 +1,19 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NoseDelivery.Business.Models;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
 
 namespace NoseDelivery.Data.Context
 {
     public class MeuDbContext : DbContext
     {
+
+        public MeuDbContext()
+        {
+            
+        }
         public MeuDbContext(DbContextOptions<MeuDbContext> options) : base(options) { }
 
         public DbSet<Cliente> Clientes { get; set; }
@@ -17,9 +26,6 @@ namespace NoseDelivery.Data.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
-            base.OnModelCreating(modelBuilder);
-
             modelBuilder.Entity<ProdutoParaPedido>()
                 .HasKey(x => new { x.ProdutoId, x.PedidoId });
 
@@ -33,6 +39,8 @@ namespace NoseDelivery.Data.Context
                 .HasOne(p => p.Produto)
                 .WithMany(pp => pp.ProdutosParaPedidos)
                 .HasForeignKey(ppp => ppp.ProdutoId);
+
+                base.OnModelCreating(modelBuilder);
 
         }
 

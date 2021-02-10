@@ -23,9 +23,7 @@ namespace NoseDelivery.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<MeuDbContext>(options =>
-            options.UseMySql(Configuration.GetConnectionString("DefaultConnection"),
-            migrations => migrations.MigrationsAssembly("NoseDelivery.Data")
-            ));
+            options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
 
 
             services.AddControllers();

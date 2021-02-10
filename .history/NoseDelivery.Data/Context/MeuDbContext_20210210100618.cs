@@ -1,5 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NoseDelivery.Business.Models;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
 
 namespace NoseDelivery.Data.Context
 {
@@ -17,9 +21,6 @@ namespace NoseDelivery.Data.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
-            base.OnModelCreating(modelBuilder);
-
             modelBuilder.Entity<ProdutoParaPedido>()
                 .HasKey(x => new { x.ProdutoId, x.PedidoId });
 

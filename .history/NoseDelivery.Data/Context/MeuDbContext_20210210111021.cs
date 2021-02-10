@@ -1,10 +1,19 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NoseDelivery.Business.Models;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
 
 namespace NoseDelivery.Data.Context
 {
     public class MeuDbContext : DbContext
     {
+
+        public MeuDbContext()
+        {
+            
+        }
         public MeuDbContext(DbContextOptions<MeuDbContext> options) : base(options) { }
 
         public DbSet<Cliente> Clientes { get; set; }
