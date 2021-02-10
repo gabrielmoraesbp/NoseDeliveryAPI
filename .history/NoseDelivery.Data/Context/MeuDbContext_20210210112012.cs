@@ -5,6 +5,7 @@ namespace NoseDelivery.Data.Context
 {
     public class MeuDbContext : DbContext
     {
+        protected MeuDbContext() { }
         public MeuDbContext(DbContextOptions<MeuDbContext> options) : base(options) { }
 
         public DbSet<Cliente> Clientes { get; set; }
