@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace NoseDelivery.Business.Interfaces
 {
-    class IPedidosRepository
+    public interface IPedidoRepository
     {
+
     }
 }
