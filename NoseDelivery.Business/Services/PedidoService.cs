@@ -1,5 +1,7 @@
-﻿using NoseDelivery.Business.Interfaces;
+﻿using NoseDelivery.Business.Enums;
+using NoseDelivery.Business.Interfaces;
 using NoseDelivery.Business.Models;
+using NoseDelivery.Business.Models.Validations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,18 +12,31 @@ namespace NoseDelivery.Business.Services
 {
     public class PedidoService : IPedidoService
     {
-        //private readonly IPedidoRepository _pedidoRepository;
+        private readonly IPedidoService _pedidoService;
 
-
-        public Task Adicionar(Pedido pedido)
+        public PedidoService(IPedidoService pedidoService)
         {
-            throw new NotImplementedException();
+            _pedidoService = pedidoService;
+                      
         }
-             
 
-        public Task Remover(Guid id)
+
+        public async Task AdicionarPedido(Pedido pedido)
         {
-            throw new NotImplementedException();
+            if (pedido == null) return;
+
+            await _pedidoService.AdicionarPedido(pedido);
+        }
+
+        public async Task StatusPedido(StatusEntrega status)
+        {
+            await _pedidoService.StatusPedido(status);
+        }
+
+
+        public  async Task RemoverPedido(Guid id)
+        {
+            await _pedidoService.RemoverPedido(id);
         }
 
         public void Dispose()

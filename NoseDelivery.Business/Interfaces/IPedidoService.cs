@@ -1,4 +1,5 @@
-﻿using NoseDelivery.Business.Models;
+﻿using NoseDelivery.Business.Enums;
+using NoseDelivery.Business.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,9 @@ namespace NoseDelivery.Business.Interfaces
 {
     public interface IPedidoService : IDisposable
     {
-        Task Adicionar(Pedido pedido);
-        Task Remover(Guid id);
+        Task AdicionarPedido(Pedido pedido);
+        Task StatusPedido(StatusEntrega status);
+        Task RemoverPedido(Guid id);
 
     }
 }
