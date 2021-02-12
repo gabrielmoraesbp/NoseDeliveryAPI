@@ -4,7 +4,7 @@ using System.Text;
 
 namespace NoseDelivery.Business.Enums
 {
-    public enum StatusEntrega
+    public enum StatusPedido
     {
         ABERTO = 1,
         EM_PREPARACAO = 2,

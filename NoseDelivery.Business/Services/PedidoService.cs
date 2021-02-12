@@ -12,31 +12,30 @@ namespace NoseDelivery.Business.Services
 {
     public class PedidoService : IPedidoService
     {
-        private readonly IPedidoService _pedidoService;
+        private readonly IPedidoRepository _pedidoRepository;
 
-        public PedidoService(IPedidoService pedidoService)
+        public PedidoService(IPedidoRepository pedidoRepository)
         {
-            _pedidoService = pedidoService;
+            _pedidoRepository = pedidoRepository;
                       
         }
 
 
         public async Task AdicionarPedido(Pedido pedido)
         {
-            if (pedido == null) return;
 
-            await _pedidoService.AdicionarPedido(pedido);
+            //var lista = _pedidoRepository.Buscar(p => p.Data == PassarDataComoParametro);
         }
 
-        public async Task StatusPedido(StatusEntrega status)
+        public async Task StatusPedido(StatusPedido status)
         {
-            await _pedidoService.StatusPedido(status);
+            //await _pedidoService.StatusPedido(status);
         }
 
 
         public  async Task RemoverPedido(Guid id)
         {
-            await _pedidoService.RemoverPedido(id);
+            //await _pedidoService.RemoverPedido(id);
         }
 
         public void Dispose()

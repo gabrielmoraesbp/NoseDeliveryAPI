@@ -9,7 +9,7 @@ using NoseDelivery.Data.Context;
 namespace NoseDelivery.Data.Migrations
 {
     [DbContext(typeof(MeuDbContext))]
-    [Migration("20210210132215_Start")]
+    [Migration("20210212012142_Start")]
     partial class Start
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -186,11 +186,11 @@ namespace NoseDelivery.Data.Migrations
                     b.Property<string>("ClienteId")
                         .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
-                    b.Property<DateTime>("Data_Pedido")
+                    b.Property<DateTime>("Data")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<bool>("Status")
-                        .HasColumnType("tinyint(1)");
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.Property<double>("Valor")
                         .HasColumnType("double");

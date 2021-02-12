@@ -98,8 +98,8 @@ namespace NoseDelivery.Data.Migrations
                 {
                     Id = table.Column<Guid>(nullable: false),
                     Valor = table.Column<double>(nullable: false),
-                    Data_Pedido = table.Column<DateTime>(nullable: false),
-                    Status = table.Column<bool>(nullable: false),
+                    Data = table.Column<DateTime>(nullable: false),
+                    Status = table.Column<int>(nullable: false),
                     ClienteId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
