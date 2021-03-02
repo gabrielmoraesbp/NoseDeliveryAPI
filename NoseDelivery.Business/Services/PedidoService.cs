@@ -17,30 +17,52 @@ namespace NoseDelivery.Business.Services
         public PedidoService(IPedidoRepository pedidoRepository)
         {
             _pedidoRepository = pedidoRepository;
-                      
+
         }
 
 
-        public async Task AdicionarPedido(Pedido pedido)
+        public async Task<string> AdicionarPedido(Pedido pedido)
         {
+            await _pedidoRepository.Adicionar(pedido);
 
-            //var lista = _pedidoRepository.Buscar(p => p.Data == PassarDataComoParametro);
+            return "Pedido realizado com sucesso!";
+
         }
 
-        public async Task StatusPedido(StatusPedido status)
+        public async Task<string> AlterarStatus(StatusPedido status, Guid Id)
         {
-            //await _pedidoService.StatusPedido(status);
+            var pedidoCompleto = await _pedidoRepository.ObterPorId(Id);
+
+            if (pedidoCompleto == null)
+            {
+                return "Pedido não encontrado";
+            }
+            if (pedidoCompleto.Status == status)
+            {
+                return "A Alteração que esta tentando fazer é a atual.";
+            }
+            await _pedidoRepository.AlterarStatusDoPedido(status, pedidoCompleto);
+            return "Status Alterado";
         }
 
 
-        public  async Task RemoverPedido(Guid id)
+        public async Task<string> RemoverPedido(Guid id)
         {
-            //await _pedidoService.RemoverPedido(id);
+            var pedidoCompleto = await _pedidoRepository.ObterPorId(id);
+
+            if (pedidoCompleto == null)
+            {
+                return "Pedido não encontrado";
+            }
+
+            await _pedidoRepository.Remover(pedidoCompleto);
+            return "Pedido removido com sucesso";
+
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _pedidoRepository?.Dispose();
         }
     }
 }

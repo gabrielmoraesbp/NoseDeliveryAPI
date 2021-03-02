@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NoseDelivery.API.ViewModels
 {
-    public class AdicionarProdutoViewModel
+    public class ProdutoViewModel
     {
         [Required(ErrorMessage = "O Campo {0} é obrigatório")]
         [StringLength(50,

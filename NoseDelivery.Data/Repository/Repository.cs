@@ -48,10 +48,9 @@ namespace NoseDelivery.Data.Repository
             await SaveChanges();
         }      
 
-        public virtual async Task Remover(Guid id)
+        public virtual async Task Remover(TEntity entity)
         {
-
-            DbSet.Remove(new TEntity { Id = id });
+            DbSet.Remove(entity);
             await SaveChanges();
         }
 

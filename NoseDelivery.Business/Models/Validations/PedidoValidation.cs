@@ -9,7 +9,7 @@ namespace NoseDelivery.Business.Models.Validations
     {
         public PedidoValidation()
         {
-            RuleFor(c => c.Cliente).NotEmpty();
+            //RuleFor(c => c.Status).
 
         }
 

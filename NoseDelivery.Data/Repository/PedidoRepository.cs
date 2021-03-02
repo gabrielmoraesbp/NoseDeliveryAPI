@@ -18,20 +18,11 @@ namespace NoseDelivery.Data.Repository
         public PedidoRepository(MeuDbContext context) : base(context) { }
 
         public async Task AlterarStatusDoPedido(StatusPedido status, Pedido pedido)
-        {
-            var pedidoCliente = await ObterPorId(pedido.Id);
+        {            
+            pedido.Status = status;
 
-            pedidoCliente.Status = status;
-
-            await Atualizar(pedidoCliente);
-           
-        }
-
-        public async Task<Pedido> ObterHistoricoCliente(string telefone)
-        {
-            throw new NotImplementedException();
-
-        }
+            await Atualizar(pedido);           
+        }       
         public override async Task<List<Pedido>> ObterTodos()
         {
             return await DbSet.AsNoTracking()
@@ -51,11 +42,15 @@ namespace NoseDelivery.Data.Repository
                 .ToListAsync();
         }
 
-        public Task<IEnumerable<Pedido>> ObterPedidosPorData(DateTime dataPedido)
+        public async Task<IEnumerable<Pedido>> ObterPedidosPorData(DateTime dataPedido)
         {
-            throw new NotImplementedException();
+            return await Buscar(p => p.Data == dataPedido);
         }
 
+        public async Task<IEnumerable<Pedido>> ObterPorStatus(StatusPedido status)
+        {
+            return await Buscar(p => p.Status == status);
+        }
 
 
     }

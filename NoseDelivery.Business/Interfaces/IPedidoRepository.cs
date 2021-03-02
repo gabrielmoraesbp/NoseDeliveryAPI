@@ -10,8 +10,8 @@ namespace NoseDelivery.Business.Interfaces
     public interface IPedidoRepository : IRepository<Pedido>
     {
         Task<IEnumerable<Pedido>> ObterPedidosPorData(DateTime dataPedido);
-        Task<Pedido> ObterHistoricoCliente(string telefone);
         Task AlterarStatusDoPedido(StatusPedido status, Pedido pedido);
+        Task<IEnumerable<Pedido>> ObterPorStatus(StatusPedido status);
 
     }
 }
