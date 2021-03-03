@@ -23,6 +23,7 @@ namespace NoseDelivery.Business.Services
 
         public async Task<string> AdicionarPedido(Pedido pedido)
         {
+
             await _pedidoRepository.Adicionar(pedido);
 
             return "Pedido realizado com sucesso!";

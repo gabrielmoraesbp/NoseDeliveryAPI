@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using NoseDelivery.API.Configuration;
 using NoseDelivery.Data.Context;
+using AutoMapper;
 
 
 namespace NoseDelivery.API
@@ -28,7 +29,7 @@ namespace NoseDelivery.API
             migrations => migrations.MigrationsAssembly("NoseDelivery.Data")
             ));
 
-
+            services.AddAutoMapper();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

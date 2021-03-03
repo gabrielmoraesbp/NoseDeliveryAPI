@@ -16,8 +16,10 @@ namespace NoseDelivery.API.Configuration
         {
             services.AddScoped<MeuDbContext>();
             services.AddScoped<IPedidoRepository, PedidoRepository>();
+            services.AddScoped<IProdutoRepository, ProdutoRepository>();
 
-            //services.AddScoped<IPedidoService, PedidoService>();
+            services.AddScoped<IPedidoService, PedidoService>();
+            services.AddScoped<IProdutoService, ProdutoService>();
 
             return services;
         }

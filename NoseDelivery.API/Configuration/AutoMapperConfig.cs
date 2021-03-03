@@ -12,9 +12,9 @@ namespace NoseDelivery.API.Configuration
     {
         public AutoMapperConfig()
         {
-            CreateMap<Pedido, PedidoViewModel>().ReverseMap();
-            CreateMap<Produto, ProdutoViewModel>().ReverseMap();
-            CreateMap<ProdutoParaPedido, ProdutoParaPedidoViewModel>().ReverseMap();
+            CreateMap<Pedido, PedidoViewModel>();
+            CreateMap<ProdutoParaPedido, ProdutoParaPedidoViewModel>();
+            CreateMap<Produto, ProdutoViewModel>();
 
         }
 
