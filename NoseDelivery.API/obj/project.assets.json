@@ -821,12 +821,15 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "AutoMapper": "7.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "3.1.0",
           "FluentValidation": "9.5.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.12",
           "Microsoft.EntityFrameworkCore": "3.1.12",
           "Microsoft.EntityFrameworkCore.Relational": "3.1.12",
           "Microsoft.Extensions.Hosting": "3.1.12",
-          "Microsoft.Extensions.Identity.Core": "3.1.12"
+          "Microsoft.Extensions.Identity.Core": "3.1.12",
+          "NoseDelivery.DTO": "1.0.0"
         },
         "compile": {
           "bin/placeholder/NoseDelivery.Business.dll": {}
@@ -850,6 +853,20 @@
         },
         "runtime": {
           "bin/placeholder/NoseDelivery.Data.dll": {}
+        }
+      },
+      "NoseDelivery.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AutoMapper": "7.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "3.1.0"
+        },
+        "compile": {
+          "bin/placeholder/NoseDelivery.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NoseDelivery.DTO.dll": {}
         }
       }
     }
@@ -2268,6 +2285,11 @@
       "type": "project",
       "path": "../NoseDelivery.Data/NoseDelivery.Data.csproj",
       "msbuildProject": "../NoseDelivery.Data/NoseDelivery.Data.csproj"
+    },
+    "NoseDelivery.DTO/1.0.0": {
+      "type": "project",
+      "path": "../DTO/NoseDelivery.DTO.csproj",
+      "msbuildProject": "../DTO/NoseDelivery.DTO.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2283,6 +2305,7 @@
       "Microsoft.Extensions.DependencyModel >= 3.1.6",
       "Microsoft.Extensions.Identity.Core >= 3.1.12",
       "NoseDelivery.Business >= 1.0.0",
+      "NoseDelivery.DTO >= 1.0.0",
       "NoseDelivery.Data >= 1.0.0",
       "Pomelo.EntityFrameworkCore.MySql >= 3.2.4",
       "Swashbuckle.AspNetCore >= 5.6.3"
@@ -2319,6 +2342,9 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
+            "C:\\Users\\gabri\\source\\repos\\NoseDelivery.API\\DTO\\NoseDelivery.DTO.csproj": {
+              "projectPath": "C:\\Users\\gabri\\source\\repos\\NoseDelivery.API\\DTO\\NoseDelivery.DTO.csproj"
+            },
             "C:\\Users\\gabri\\source\\repos\\NoseDelivery.API\\NoseDelivery.Business\\NoseDelivery.Business.csproj": {
               "projectPath": "C:\\Users\\gabri\\source\\repos\\NoseDelivery.API\\NoseDelivery.Business\\NoseDelivery.Business.csproj"
             },
@@ -2409,7 +2435,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

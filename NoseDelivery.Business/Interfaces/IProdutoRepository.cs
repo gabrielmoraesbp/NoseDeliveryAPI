@@ -8,8 +8,9 @@ namespace NoseDelivery.Business.Interfaces
 {
     public interface IProdutoRepository : IRepository<Produto>
     {
-        Task<IEnumerable<Produto>> ObterTodosOrderNome(Guid Id);
-        Task<IEnumerable<Produto>> ObterTodosOrderPreco(Guid Id);
+        Task<IEnumerable<Produto>> ObterTodosOrderNome();
+        Task<Produto> ObterProdutoPorId(Guid id);
+        Task<IEnumerable<Produto>> ObterTodosOrderPreco();
         
     }
 }

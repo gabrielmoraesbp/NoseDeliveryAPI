@@ -8,6 +8,8 @@ namespace NoseDelivery.API.ViewModels
 {
     public class PedidoViewModel
     {
+        [Key]
+        public Guid Id { get; set; }
 
         [Required(ErrorMessage = "O Campo {0} é obrigatório")]
         [StringLength(40, 

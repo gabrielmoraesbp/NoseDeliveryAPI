@@ -8,6 +8,9 @@ namespace NoseDelivery.API.ViewModels
 {
     public class ProdutoViewModel
     {
+        [Key]
+        public Guid Id { get; set; }
+
         [Required(ErrorMessage = "O Campo {0} é obrigatório")]
         [StringLength(50,
             ErrorMessage = "O campo {0} precisa ter entre {2} e " +
@@ -24,6 +27,7 @@ namespace NoseDelivery.API.ViewModels
         public double Preco { get; set; }
 
         [Required(ErrorMessage = "O Campo {0} é obrigatório")]
+        [Range(1, int.MaxValue)]
         public int Quantidade { get; set; }
 
     }

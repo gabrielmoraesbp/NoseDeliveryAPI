@@ -1,0 +1,9 @@
+C:\Users\gabri\source\repos\NoseDelivery.API\DTO\bin\Debug\netcoreapp3.1\NoseDelivery.DTO.deps.json
+C:\Users\gabri\source\repos\NoseDelivery.API\DTO\bin\Debug\netcoreapp3.1\NoseDelivery.DTO.dll
+C:\Users\gabri\source\repos\NoseDelivery.API\DTO\bin\Debug\netcoreapp3.1\NoseDelivery.DTO.pdb
+C:\Users\gabri\source\repos\NoseDelivery.API\DTO\obj\Debug\netcoreapp3.1\NoseDelivery.DTO.csprojAssemblyReference.cache
+C:\Users\gabri\source\repos\NoseDelivery.API\DTO\obj\Debug\netcoreapp3.1\NoseDelivery.DTO.AssemblyInfoInputs.cache
+C:\Users\gabri\source\repos\NoseDelivery.API\DTO\obj\Debug\netcoreapp3.1\NoseDelivery.DTO.AssemblyInfo.cs
+C:\Users\gabri\source\repos\NoseDelivery.API\DTO\obj\Debug\netcoreapp3.1\NoseDelivery.DTO.csproj.CoreCompileInputs.cache
+C:\Users\gabri\source\repos\NoseDelivery.API\DTO\obj\Debug\netcoreapp3.1\NoseDelivery.DTO.dll
+C:\Users\gabri\source\repos\NoseDelivery.API\DTO\obj\Debug\netcoreapp3.1\NoseDelivery.DTO.pdb

@@ -7,17 +7,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 
 namespace NoseDelivery.Business.Services
 {
     public class PedidoService : IPedidoService
     {
         private readonly IPedidoRepository _pedidoRepository;
+        private readonly IMapper _mapper;
 
-        public PedidoService(IPedidoRepository pedidoRepository)
+        public PedidoService(IPedidoRepository pedidoRepository,
+                            IMapper mapper)
         {
             _pedidoRepository = pedidoRepository;
-
+            _mapper = mapper;
         }
 
 
@@ -47,23 +50,28 @@ namespace NoseDelivery.Business.Services
         }
 
 
-        public async Task<string> RemoverPedido(Guid id)
-        {
-            var pedidoCompleto = await _pedidoRepository.ObterPorId(id);
+        //public async Task<string> RemoverPedido(Guid id)
+        //{
+        //    var pedidoCompleto = await _pedidoRepository.ObterPorId(id);
 
-            if (pedidoCompleto == null)
-            {
-                return "Pedido não encontrado";
-            }
+        //    if (pedidoCompleto == null)
+        //    {
+        //        return "Pedido não encontrado";
+        //    }
 
-            await _pedidoRepository.Remover(pedidoCompleto);
-            return "Pedido removido com sucesso";
+        //    await _pedidoRepository.Remover(id);
+        //    return "Pedido removido com sucesso";
 
-        }
-
+        //}
+               
         public void Dispose()
         {
             _pedidoRepository?.Dispose();
+        }
+
+        public Task<string> RemoverPedido(Guid id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -10,6 +10,8 @@ namespace NoseDelivery.Business.Interfaces
 {
     public interface IPedidoService : IDisposable
     {
+
+
         Task<string> AdicionarPedido(Pedido pedido);
         Task<string> AlterarStatus(StatusPedido status, Guid Id);
         Task<string> RemoverPedido(Guid id);

@@ -29,7 +29,7 @@ namespace NoseDelivery.API
             migrations => migrations.MigrationsAssembly("NoseDelivery.Data")
             ));
 
-            services.AddAutoMapper();
+            services.AddAutoMapper(typeof(Startup));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

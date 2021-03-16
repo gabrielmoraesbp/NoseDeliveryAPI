@@ -10,3 +10,6 @@ C:\Users\gabri\source\repos\NoseDelivery.API\NoseDelivery.Business\obj\Debug\net
 C:\Users\gabri\source\repos\NoseDelivery.API\NoseDelivery.Business\obj\Debug\netcoreapp3.1\NoseDelivery.Business.dll
 C:\Users\gabri\source\repos\NoseDelivery.API\NoseDelivery.Business\obj\Debug\netcoreapp3.1\NoseDelivery.Business.pdb
 C:\Users\gabri\source\repos\NoseDelivery.API\NoseDelivery.Business\obj\Debug\netcoreapp3.1\NoseDelivery.Business.genruntimeconfig.cache
+C:\Users\gabri\source\repos\NoseDelivery.API\NoseDelivery.Business\bin\Debug\netcoreapp3.1\NoseDelivery.DTO.dll
+C:\Users\gabri\source\repos\NoseDelivery.API\NoseDelivery.Business\bin\Debug\netcoreapp3.1\NoseDelivery.DTO.pdb
+C:\Users\gabri\source\repos\NoseDelivery.API\NoseDelivery.Business\obj\Debug\netcoreapp3.1\NoseDelivery.Business.csproj.CopyComplete

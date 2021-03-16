@@ -1,4 +1,6 @@
-﻿using NoseDelivery.Business.Interfaces;
+﻿using AutoMapper;
+using NoseDelivery.API.ViewModels;
+using NoseDelivery.Business.Interfaces;
 using NoseDelivery.Business.Models;
 using System;
 using System.Collections.Generic;
@@ -11,41 +13,70 @@ namespace NoseDelivery.Business.Services
     public class ProdutoService : IProdutoService
     {
         private readonly IProdutoRepository _produtoRepository;
+        private readonly IMapper _mapper;
 
-        public ProdutoService(IProdutoRepository produtoRepository)
+        public ProdutoService(IProdutoRepository produtoRepository,
+                              IMapper mapper)
         {
             _produtoRepository = produtoRepository;
+            _mapper = mapper;
         }
+
+        public async Task<List<Produto>> ObterCardapio()
+        {
+            var todosProdutos = await _produtoRepository.ObterTodos();
+
+            return todosProdutos;
+        }
+
+        public async Task<Produto> ObterProdutoPorId(Guid Id)
+        {
+            var obtiveProduto = await _produtoRepository.ObterProdutoPorId(Id);
+
+            return obtiveProduto;
+        }
+
+
         public async Task<string> AdicionarNovoProduto(Produto produto)
         {
             await _produtoRepository.Adicionar(produto);
             return "Produto Adicionado com sucesso!";
         }
 
-        public async Task<string> AtualizarProduto(Guid id)
+        public async Task<bool> AtualizarProduto(Guid id, ProdutoViewModel produtoViewModel)
         {
-            var produtoCompleto = await _produtoRepository.ObterPorId(id);
+            try
+            {
+                var produtoAtualizacao = await ObterProdutoPorId(id);
+                if (produtoAtualizacao == null) return false;
+                produtoAtualizacao.Nome = produtoViewModel.Nome;
+                produtoAtualizacao.Descricao = produtoViewModel.Descricao;
+                produtoAtualizacao.Preco = produtoViewModel.Preco;
+                produtoAtualizacao.Quantidade = produtoViewModel.Quantidade;
+                            
+                await _produtoRepository.Atualizar(produtoAtualizacao);
+                return true;
+            }
 
-            if (produtoCompleto == null) return "Produto não encontrado";
+            catch (InvalidOperationException ex)
+            {
+                throw ex;
+            }
 
-            await _produtoRepository.Atualizar(produtoCompleto);
-            return "Produto Atualizado";
         }
 
         public async Task<string> DeletarProduto(Guid id)
         {
-            var produtoCompleto = await _produtoRepository.ObterPorId(id);
-            if (produtoCompleto == null) return "Produto não encontrado";
-
-            await _produtoRepository.Remover(produtoCompleto);
+            await _produtoRepository.Remover(id);
             return "Produto Removido";
         }
+
 
         public void Dispose()
         {
             _produtoRepository?.Dispose();
         }
 
-     
+
     }
 }

@@ -42,6 +42,7 @@
           "Microsoft.Extensions.DependencyModel": "3.1.6",
           "Microsoft.Extensions.Identity.Core": "3.1.12",
           "NoseDelivery.Business": "1.0.0",
+          "NoseDelivery.DTO": "1.0.0",
           "NoseDelivery.Data": "1.0.0",
           "Pomelo.EntityFrameworkCore.MySql": "3.2.4",
           "Swashbuckle.AspNetCore": "5.6.3",
@@ -1088,12 +1089,15 @@
       "System.ValueTuple/4.5.0": {},
       "NoseDelivery.Business/1.0.0": {
         "dependencies": {
+          "AutoMapper": "7.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "3.1.0",
           "FluentValidation": "9.5.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.12",
           "Microsoft.EntityFrameworkCore": "3.1.12",
           "Microsoft.EntityFrameworkCore.Relational": "3.1.12",
           "Microsoft.Extensions.Hosting": "3.1.12",
-          "Microsoft.Extensions.Identity.Core": "3.1.12"
+          "Microsoft.Extensions.Identity.Core": "3.1.12",
+          "NoseDelivery.DTO": "1.0.0"
         },
         "runtime": {
           "NoseDelivery.Business.dll": {}
@@ -1115,6 +1119,18 @@
         },
         "compile": {
           "NoseDelivery.Data.dll": {}
+        }
+      },
+      "NoseDelivery.DTO/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "7.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "3.1.0"
+        },
+        "runtime": {
+          "NoseDelivery.DTO.dll": {}
+        },
+        "compile": {
+          "NoseDelivery.DTO.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -3074,6 +3090,11 @@
       "sha512": ""
     },
     "NoseDelivery.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NoseDelivery.DTO/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

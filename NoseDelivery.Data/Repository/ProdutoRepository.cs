@@ -25,6 +25,13 @@ namespace NoseDelivery.Data.Repository
                 .ToListAsync();
         }
 
+        public async Task<Produto> ObterProdutoPorId(Guid id)
+        {
+            return await Db.Produtos
+                .AsNoTracking()
+                .FirstOrDefaultAsync(f => f.Id == id);
+        }
+
         public override async Task<List<Produto>> ObterTodos()
         {
             return await Db.Produtos
@@ -33,7 +40,7 @@ namespace NoseDelivery.Data.Repository
                 .ToListAsync();
         }
 
-        public async Task<IEnumerable<Produto>> ObterTodosOrderNome(Guid Id)
+        public async Task<IEnumerable<Produto>> ObterTodosOrderNome()
         {
             return await Db.Produtos
                 .AsNoTracking()
@@ -41,7 +48,7 @@ namespace NoseDelivery.Data.Repository
                 .ToListAsync();
         }
 
-        public async Task<IEnumerable<Produto>> ObterTodosOrderPreco(Guid Id)
+        public async Task<IEnumerable<Produto>> ObterTodosOrderPreco()
         {
             return await Db.Produtos
                 .AsNoTracking()
